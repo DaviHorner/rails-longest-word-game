@@ -1,0 +1,15 @@
+<h1>Longest Word-Game</h1>
+
+<h2>****** Welcome to the longest word-game !******</h2>
+
+<h3>"Here is your grid :"</h3>
+<h4><%= @gen_grid %></h4>
+<h2>**********************************************</h2>
+
+<form action="/score" method="get">
+  <label for="question">What's your best shot ?</label>
+  <input type="hidden" name="grid" value="<%= @join_grid %>">
+  <input type="hidden" name="time" value="<%= @start %>">
+  <input type="text" id="guess" name="guess">
+  <input type="submit" value="Go on!">
+</form>
